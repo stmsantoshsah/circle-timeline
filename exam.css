@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 200px 0;
+    position: relative;
+    justify-content: center;
+}
+
+.list-item {
+    width: 300px;
+    margin-left: -15px;
+}
+
+.list-item-1 {
+    margin-left: 0;
+}
+
+.list-item-6,
+.list-item-7 {
+    position: absolute;
+    z-index: -1;
+}
+
+.list-item-6 svg .Progress_circle,
+.list-item-7 svg .Progress_circle {
+    fill: #E8F6FF;
+    stroke-dasharray: 7;
+}
+
+.list-item-6 {
+    top: 10px;
+    left: 31%;
+}
+
+.list-item-7 {
+    bottom:20px;
+    right: 31%;
+}
+
+.progress_bar {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.Progress_circles {
+    position: absolute;
+}
+
+.progress_bar .process-badge {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(42deg, #1241B8 0%, #3096E0 60.78%, #EDABB8 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+.list-item:nth-child(odd) .process-badge {
+    top: -30px;
+}
+
+.list-item:nth-child(even) .process-badge {
+    bottom: -30px;
+}
+
+.progress_text {
+    max-width: 60%;
+    position: relative;
+}
+
+.progress_text h3 {
+    color: #141774;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+
+.progress_text p {
+    color: #62637D;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    font-family: "Outfit", sans-serif;
+}
+
+.list-item-1 .progress_bar .Progress_circle:nth-child(2) {
+    stroke-dasharray: 600;
+    stroke-dashoffset: -160;
+    
+}
+
+.list-item-2 .progress_bar .Progress_circle:nth-child(2) {
+    stroke-dasharray: 264;
+    stroke-dashoffset: 90;
+    fill: #fff;
+}
+
+.list-item-3 .progress_bar .Progress_circle:nth-child(2) {
+    stroke-dasharray: 270;
+    stroke-dashoffset: -160;
+    fill: #fff;
+}
+
+.list-item-4 .progress_bar .Progress_circle:nth-child(2) {
+    stroke-dasharray: 264;
+    stroke-dashoffset: 90;
+    fill: #fff;
+}
+
+.list-item-5 .progress_bar .Progress_circle:nth-child(2) {
+    stroke-dasharray: 600;
+    stroke-dashoffset: 160;
+}
+
+.Progress_circle{
+    stroke: url(#paint0_linear_1_2604);
+    animation-name:dash;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count:1;
+}
+@keyframes dash {
+    0% {
+        stroke-dashoffset: -160;
+    }
+    100% {
+        stroke-dashoffset: 440; /* Adjust this value as needed */
+    }
+}
